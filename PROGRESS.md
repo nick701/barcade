@@ -88,3 +88,12 @@
 - Invoked `start`, `pause`, `resume`, and `reset` for every game implementation.
 - Expanded store coverage for defaults, JSON round trips, validation, top-five retention, reaction-time sorting, and resets.
 - Verified 27 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.
+
+## Checkpoint 9 - Final validation
+
+- Audited every validation criterion in `PLAN.md` against the committed source and built app.
+- Confirmed 15 isolated game folders, 15 catalog routes, and 15 frozen-protocol conformances.
+- Confirmed no network, telemetry, third-party engine, entitlement, or `UserDefaults` usage.
+- Launched the built app successfully and confirmed its bundled `LSUIElement` value is `true`.
+- Validated both persisted files under `~/.config/barcade/` as JSON.
+- Ran a clean `xcodebuild build` followed by `xcodebuild test`: 27 tests passed, zero failures, zero warnings.
