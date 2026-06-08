@@ -81,3 +81,10 @@
 - Verified the first-launch state launches successfully in a floating Barcade window.
 - Visual screenshot inspection was unavailable because macOS Screen Recording permission is disabled.
 - Verified 25 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.
+
+## Checkpoint 8 - Unit tests
+
+- Added exhaustive `BarcadeGame` conformance coverage for all 15 catalog games.
+- Invoked `start`, `pause`, `resume`, and `reset` for every game implementation.
+- Expanded store coverage for defaults, JSON round trips, validation, top-five retention, reaction-time sorting, and resets.
+- Verified 27 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.

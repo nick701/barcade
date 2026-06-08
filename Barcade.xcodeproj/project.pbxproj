@@ -22,6 +22,7 @@
 		5DF3ECE8580B4399A9028654 /* TetrisGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E921980E10D02C2EE6F71B /* TetrisGame.swift */; };
 		63B9D4373D1821FED2FFB3B6 /* TypeRacerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07FAFA1F480B16189129F9 /* TypeRacerGame.swift */; };
 		6AD3F2EAABE2ACF6C8602C28 /* FlappyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC937D01B12078D8E11462E4 /* FlappyGame.swift */; };
+		6E8C366018CFBB75A8D78271 /* GameProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456B3974566BDE150566712 /* GameProtocolTests.swift */; };
 		74EE1DBB144BD9D17EDD149F /* GameCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F852D08A9081495DF969D /* GameCatalog.swift */; };
 		78AFDF4EBBAA905AA2E6350C /* BreakoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F78F12B7714AED89355B1A /* BreakoutGame.swift */; };
 		83AE4F279D1122A1E597EC13 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F4D9E3DB11737343084E0C /* SettingsStore.swift */; };
@@ -65,6 +66,7 @@
 		393F852D08A9081495DF969D /* GameCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameCatalog.swift; sourceTree = "<group>"; };
 		4105E5E3342C12A30FCC6C99 /* OnboardingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		43D85A26EA7D048AEDD24D71 /* ClickCaptureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClickCaptureView.swift; sourceTree = "<group>"; };
+		4456B3974566BDE150566712 /* GameProtocolTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameProtocolTests.swift; sourceTree = "<group>"; };
 		46238667F0A54B737B7C452A /* GameHostView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameHostView.swift; sourceTree = "<group>"; };
 		55884B9E1014149EBFCE2A14 /* TapTheDotGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TapTheDotGame.swift; sourceTree = "<group>"; };
 		80613B7D962B6A1ADCB787C8 /* ReactionTimerGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReactionTimerGame.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				C465549E116386239E342317 /* StoreTests.swift */,
 				96ECDD73D67ED04A559157B6 /* PauseManagerTests.swift */,
 				BA43483E418404B84114B583 /* GameLogicTests.swift */,
+				4456B3974566BDE150566712 /* GameProtocolTests.swift */,
 			);
 			path = BarcadeTests;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				C755CA617150089C19BAE94A /* StoreTests.swift in Sources */,
 				BD0B3939E733D16ACB90C81C /* PauseManagerTests.swift in Sources */,
 				A63895EEEA9225802D7E720C /* GameLogicTests.swift in Sources */,
+				6E8C366018CFBB75A8D78271 /* GameProtocolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

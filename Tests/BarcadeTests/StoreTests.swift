@@ -52,6 +52,15 @@ final class StoreTests: XCTestCase {
         )
     }
 
+    func testSettingsStoreRejectsIncompleteGameOrder() throws {
+        let store = try SettingsStore(directoryURL: temporaryDirectory)
+
+        XCTAssertThrowsError(
+            try store.setGameOrder(["snake", "flappy"])
+        )
+        XCTAssertEqual(store.settings.gameOrder, GameCatalog.allIDs)
+    }
+
     func testCatalogFiltersEnabledGamesInStoredOrder() {
         var settings = AppSettings.defaults
         settings.enabledGames = ["snake", "pong", "flappy"]
