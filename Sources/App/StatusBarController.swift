@@ -2,9 +2,10 @@ import AppKit
 import SwiftUI
 
 @MainActor
-final class StatusBarController: NSObject {
+final class StatusBarController: NSObject, NSPopoverDelegate {
     private let statusItem: NSStatusItem
     private let popover: NSPopover
+    private let pauseManager = PauseManager()
 
     override init() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
@@ -23,6 +24,7 @@ final class StatusBarController: NSObject {
 
         popover.behavior = .transient
         popover.animates = true
+        popover.delegate = self
         popover.contentSize = NSSize(width: 460, height: 600)
 
         let rootView: AnyView
@@ -32,7 +34,8 @@ final class StatusBarController: NSObject {
             rootView = AnyView(
                 RootView(
                     settingsStore: settingsStore,
-                    scoreStore: scoreStore
+                    scoreStore: scoreStore,
+                    pauseManager: pauseManager
                 )
             )
         } catch {
@@ -46,6 +49,15 @@ final class StatusBarController: NSObject {
             popover.performClose(nil)
         } else if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+            pauseManager.observe(window: popover.contentViewController?.view.window)
         }
+    }
+
+    func popoverWillShow(_ notification: Notification) {
+        pauseManager.focusRegained()
+    }
+
+    func popoverDidClose(_ notification: Notification) {
+        pauseManager.focusLost()
     }
 }

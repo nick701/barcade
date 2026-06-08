@@ -3,6 +3,7 @@ import SwiftUI
 struct RootView: View {
     @ObservedObject var settingsStore: SettingsStore
     @ObservedObject var scoreStore: ScoreStore
+    @ObservedObject var pauseManager: PauseManager
 
     @State private var section = RootSection.games
     @State private var selectedGame: GameMetadata?

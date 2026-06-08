@@ -27,3 +27,12 @@
 - Wired both stores into app startup with a visible storage error state.
 - Verified a real launch creates both JSON files under `~/.config/barcade/`.
 - Verified five tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.
+
+## Checkpoint 4 - Pause and resume lifecycle
+
+- Added one shared `PauseManager` for the active `BarcadeGame`.
+- Popover closure and window focus loss pause the active game immediately.
+- Popover reopening and window focus regain resume only a focus-paused game.
+- Duplicate focus notifications are idempotent.
+- Injected the manager into the root view for game-host registration.
+- Verified seven tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.

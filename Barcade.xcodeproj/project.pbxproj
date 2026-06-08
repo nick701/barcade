@@ -18,7 +18,9 @@
 		A10000000000000000000003 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* StatusBarController.swift */; };
 		A10000000000000000000004 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* RootView.swift */; };
 		A10000000000000000000005 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* GameProtocol.swift */; };
+		BD0B3939E733D16ACB90C81C /* PauseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECDD73D67ED04A559157B6 /* PauseManagerTests.swift */; };
 		C755CA617150089C19BAE94A /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465549E116386239E342317 /* StoreTests.swift */; };
+		DEB0F94880E4E237CEEF439B /* PauseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D1BA69DD7785CF0D3BB43A /* PauseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* Begin PBXFileReference section */
 		393F852D08A9081495DF969D /* GameCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameCatalog.swift; sourceTree = "<group>"; };
 		95F4D9E3DB11737343084E0C /* SettingsStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		96ECDD73D67ED04A559157B6 /* PauseManagerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PauseManagerTests.swift; sourceTree = "<group>"; };
 		B0774DCFDCB28B2E3F4BBAA4 /* GamePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GamePickerView.swift; sourceTree = "<group>"; };
 		B10000000000000000000001 /* BarcadeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcadeApp.swift; sourceTree = "<group>"; };
 		B10000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		B10000000000000000000009 /* BarcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarcadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B1DDCCF8490F076EE5640A /* ScoreStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreStore.swift; sourceTree = "<group>"; };
 		C465549E116386239E342317 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
+		D7D1BA69DD7785CF0D3BB43A /* PauseManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PauseManager.swift; sourceTree = "<group>"; };
 		ED93197A856584E5541A9099 /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EE132A505E6ABDFFA36D0651 /* HighScoresView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HighScoresView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,15 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		B27AF2F4922BBAED8E92AB40 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D7D1BA69DD7785CF0D3BB43A /* PauseManager.swift */,
+			);
+			name = Utilities;
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		G10000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +107,7 @@
 				G10000000000000000000004 /* Games */,
 				G10000000000000000000005 /* UI */,
 				5F5C2CA5CA83679E17551B39 /* Storage */,
+				B27AF2F4922BBAED8E92AB40 /* Utilities */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -140,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C465549E116386239E342317 /* StoreTests.swift */,
+				96ECDD73D67ED04A559157B6 /* PauseManagerTests.swift */,
 			);
 			path = BarcadeTests;
 			sourceTree = "<group>";
@@ -270,6 +285,7 @@
 				5D2D0AC51144C74D6EB853DB /* GamePickerView.swift in Sources */,
 				11DD156FD58D05205CD2F1A6 /* HighScoresView.swift in Sources */,
 				4F1E1E0BCE94E550CF2405E3 /* SettingsView.swift in Sources */,
+				DEB0F94880E4E237CEEF439B /* PauseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C755CA617150089C19BAE94A /* StoreTests.swift in Sources */,
+				BD0B3939E733D16ACB90C81C /* PauseManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
