@@ -2,3 +2,7 @@
 logs/
 .DS_Store
 PLAN.md
+.build/
+DerivedData/
+dist/
+xcuserdata/
