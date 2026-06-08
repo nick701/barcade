@@ -45,6 +45,9 @@ final class ScoreStore: ObservableObject {
             if $0.score == $1.score {
                 return $0.date > $1.date
             }
+            if gameID == "reaction-timer" {
+                return $0.score < $1.score
+            }
             return $0.score > $1.score
         }
         scoresByGame[gameID] = Array(scores.prefix(5))

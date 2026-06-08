@@ -94,4 +94,15 @@ final class StoreTests: XCTestCase {
         try store.resetAll()
         XCTAssertTrue(store.scores(for: "pong").isEmpty)
     }
+
+    func testReactionTimerRanksLowerTimesFirst() throws {
+        let store = try ScoreStore(directoryURL: temporaryDirectory)
+        try store.record(score: 420, for: "reaction-timer")
+        try store.record(score: 260, for: "reaction-timer")
+
+        XCTAssertEqual(
+            store.scores(for: "reaction-timer").map(\.score),
+            [260, 420]
+        )
+    }
 }

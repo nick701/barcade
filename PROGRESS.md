@@ -36,3 +36,28 @@
 - Duplicate focus notifications are idempotent.
 - Injected the manager into the root view for game-host registration.
 - Verified seven tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.
+
+## Checkpoint 5 - Fifteen playable games
+
+- Added one shared game-session host for start, pause, resume, score recording, and teardown.
+- Implemented and individually build-verified, in plan order:
+  1. Snake
+  2. Flappy Bird
+  3. 2048
+  4. Minesweeper
+  5. Reaction Timer
+  6. Breakout
+  7. Tetris
+  8. Pong vs AI
+  9. Simon Says
+  10. Whack-a-Mole
+  11. Type Racer
+  12. Tap the Dot
+  13. Sudoku
+  14. Asteroids
+  15. Mini Billiards
+- Each game has start, scoring, game-over/completion, and restart behavior.
+- Each game is isolated in its own folder and conforms to the frozen `BarcadeGame` interface through `ScoredGame`.
+- Reaction Timer rankings correctly treat lower millisecond values as better.
+- Verified 23 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.
+- Confirmed no network API usage exists in app or test sources.

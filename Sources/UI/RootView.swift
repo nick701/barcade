@@ -11,7 +11,13 @@ struct RootView: View {
     var body: some View {
         VStack(spacing: 0) {
             if let selectedGame {
-                placeholder(for: selectedGame)
+                GameHostView(
+                    game: selectedGame,
+                    settingsStore: settingsStore,
+                    scoreStore: scoreStore,
+                    pauseManager: pauseManager,
+                    onBack: { self.selectedGame = nil }
+                )
             } else {
                 Picker("Section", selection: $section) {
                     ForEach(RootSection.allCases) { section in
@@ -46,34 +52,6 @@ struct RootView: View {
         .background(.regularMaterial)
     }
 
-    private func placeholder(for game: GameMetadata) -> some View {
-        VStack(spacing: 18) {
-            HStack {
-                Button {
-                    selectedGame = nil
-                } label: {
-                    Label("Games", systemImage: "chevron.left")
-                }
-
-                Spacer()
-            }
-
-            Spacer()
-
-            Image(systemName: game.symbolName)
-                .font(.system(size: 54))
-                .foregroundStyle(.tint)
-
-            Text(game.title)
-                .font(.largeTitle.bold())
-
-            Text("Game implementation is next.")
-                .foregroundStyle(.secondary)
-
-            Spacer()
-        }
-        .padding(20)
-    }
 }
 
 private enum RootSection: String, CaseIterable, Identifiable {
