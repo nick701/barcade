@@ -19,14 +19,33 @@ struct RootView: View {
                     onBack: { self.selectedGame = nil }
                 )
             } else {
-                Picker("Section", selection: $section) {
-                    ForEach(RootSection.allCases) { section in
-                        Label(section.title, systemImage: section.symbolName)
-                            .tag(section)
+                HStack(spacing: 10) {
+                    Picker("Section", selection: $section) {
+                        ForEach(RootSection.allCases) { section in
+                            Label(section.title, systemImage: section.symbolName)
+                                .tag(section)
+                        }
                     }
+                    .pickerStyle(.segmented)
+                    .labelsHidden()
+
+                    Button {
+                        try? settingsStore.setFloatingWindow(
+                            !settingsStore.settings.floatingWindow
+                        )
+                    } label: {
+                        Image(
+                            systemName: settingsStore.settings.floatingWindow
+                                ? "pin.slash"
+                                : "pin"
+                        )
+                    }
+                    .help(
+                        settingsStore.settings.floatingWindow
+                            ? "Return to menu bar"
+                            : "Open as floating window"
+                    )
                 }
-                .pickerStyle(.segmented)
-                .labelsHidden()
                 .padding()
 
                 Group {

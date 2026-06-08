@@ -105,4 +105,11 @@ final class StoreTests: XCTestCase {
             [260, 420]
         )
     }
+
+    func testGlobalShortcutParsesDefaultOptionG() {
+        let definition = GlobalShortcutManager.definition(for: "⌥G")
+
+        XCTAssertEqual(definition?.keyCode, 5)
+        XCTAssertNotEqual(definition?.modifiers, 0)
+    }
 }

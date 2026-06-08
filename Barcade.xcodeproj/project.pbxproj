@@ -13,6 +13,7 @@
 		25AA1A616BC2DFCBF623A0FA /* GameVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFAF2714277B705CF777F4D /* GameVector.swift */; };
 		26F1A827EAD6CDBCF350DFCD /* WhackAMoleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4359249DC1A52C7A2BD1C /* WhackAMoleGame.swift */; };
 		291BD7DFBEA8913B045F048E /* ClickCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D85A26EA7D048AEDD24D71 /* ClickCaptureView.swift */; };
+		3ABBA5B354A4FA276BB20F79 /* GlobalShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA2BA0C6AE7745D027CEEA7 /* GlobalShortcutManager.swift */; };
 		40BD53E250C64F5CC1ACB446 /* PongGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0EF162C5C95D8F12D0D4CD /* PongGame.swift */; };
 		4F1E1E0BCE94E550CF2405E3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93197A856584E5541A9099 /* SettingsView.swift */; };
 		567E009211ED6E0F00DC7FF3 /* AsteroidsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A1D112939CC998FB7660CF /* AsteroidsGame.swift */; };
@@ -39,6 +40,7 @@
 		D8A8B650681BC8991559D7D2 /* BilliardsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E4D6B5BBD0AACFAE0BDC /* BilliardsGame.swift */; };
 		DEB0F94880E4E237CEEF439B /* PauseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D1BA69DD7785CF0D3BB43A /* PauseManager.swift */; };
 		F8459DB4943FB38B44ABF773 /* GameHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46238667F0A54B737B7C452A /* GameHostView.swift */; };
+		FAFA3CEEA4225DF5B3411F4A /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83A9DE65FC8E22B6D32F6FE /* LaunchAtLoginManager.swift */; };
 		FCB0B7E7A65076FBE81E8EF7 /* TwentyFortyEightGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD00B8422C7B1D5B7F1EF9 /* TwentyFortyEightGame.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +80,9 @@
 		B10000000000000000000008 /* Barcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barcade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10000000000000000000009 /* BarcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarcadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B1DDCCF8490F076EE5640A /* ScoreStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreStore.swift; sourceTree = "<group>"; };
+		B83A9DE65FC8E22B6D32F6FE /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
 		BA43483E418404B84114B583 /* GameLogicTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameLogicTests.swift; sourceTree = "<group>"; };
+		BDA2BA0C6AE7745D027CEEA7 /* GlobalShortcutManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GlobalShortcutManager.swift; sourceTree = "<group>"; };
 		C465549E116386239E342317 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
 		C51598DFF6DF4745B8B4A93A /* MinesweeperGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MinesweeperGame.swift; sourceTree = "<group>"; };
 		C89683E62A18B0537C2FFA7A /* SudokuGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SudokuGame.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 			children = (
 				D7D1BA69DD7785CF0D3BB43A /* PauseManager.swift */,
 				43D85A26EA7D048AEDD24D71 /* ClickCaptureView.swift */,
+				BDA2BA0C6AE7745D027CEEA7 /* GlobalShortcutManager.swift */,
+				B83A9DE65FC8E22B6D32F6FE /* LaunchAtLoginManager.swift */,
 			);
 			name = Utilities;
 			path = Utilities;
@@ -496,6 +502,8 @@
 				5D0A0936007CA96E15C8F8F0 /* SudokuGame.swift in Sources */,
 				567E009211ED6E0F00DC7FF3 /* AsteroidsGame.swift in Sources */,
 				D8A8B650681BC8991559D7D2 /* BilliardsGame.swift in Sources */,
+				3ABBA5B354A4FA276BB20F79 /* GlobalShortcutManager.swift in Sources */,
+				FAFA3CEEA4225DF5B3411F4A /* LaunchAtLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -61,3 +61,14 @@
 - Reaction Timer rankings correctly treat lower millisecond values as better.
 - Verified 23 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.
 - Confirmed no network API usage exists in app or test sources.
+
+## Checkpoint 6 - Native macOS integrations
+
+- Added launch-at-login registration with `SMAppService.mainApp`.
+- Added a Carbon global hotkey manager with persisted, user-editable modifier-and-key shortcuts.
+- Registered the default global shortcut as `⌥G`.
+- Added pin controls and persisted floating-window mode.
+- Floating mode moves the existing hosting controller between `NSPopover` and `NSWindow`, preserving active game state.
+- The floating window participates in the same pause/resume focus lifecycle.
+- Verified a real launch with floating mode enabled creates an on-screen Barcade window, then restored the prior settings file.
+- Verified 24 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.

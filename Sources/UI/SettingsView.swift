@@ -6,9 +6,28 @@ struct SettingsView: View {
 
     @State private var errorMessage: String?
     @State private var confirmGlobalReset = false
+    @State private var shortcutDraft = ""
 
     var body: some View {
         List {
+            Section("App") {
+                Toggle("Launch at Login", isOn: launchAtLoginBinding)
+                Toggle("Floating Window", isOn: floatingWindowBinding)
+
+                HStack {
+                    Text("Global Shortcut")
+                    Spacer()
+                    TextField("⌥G", text: $shortcutDraft)
+                        .frame(width: 90)
+                        .multilineTextAlignment(.trailing)
+                        .onSubmit(saveShortcut)
+                }
+
+                Text("Use modifier symbols such as ⌥, ⌘, ⌃, or ⇧ plus a letter.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
             Section("Games") {
                 ForEach(orderedGames) { game in
                     HStack {
@@ -87,6 +106,9 @@ struct SettingsView: View {
         } message: {
             Text(errorMessage ?? "")
         }
+        .onAppear {
+            shortcutDraft = settingsStore.settings.shortcut
+        }
     }
 
     private var orderedGames: [GameMetadata] {
@@ -136,6 +158,40 @@ struct SettingsView: View {
                 }
             }
         )
+    }
+
+    private var launchAtLoginBinding: Binding<Bool> {
+        Binding(
+            get: { settingsStore.settings.launchAtLogin },
+            set: { enabled in
+                perform {
+                    try LaunchAtLoginManager.setEnabled(enabled)
+                    try settingsStore.setLaunchAtLogin(enabled)
+                }
+            }
+        )
+    }
+
+    private var floatingWindowBinding: Binding<Bool> {
+        Binding(
+            get: { settingsStore.settings.floatingWindow },
+            set: { enabled in
+                perform {
+                    try settingsStore.setFloatingWindow(enabled)
+                }
+            }
+        )
+    }
+
+    private func saveShortcut() {
+        guard GlobalShortcutManager.definition(for: shortcutDraft) != nil else {
+            errorMessage = "Enter a shortcut such as ⌥G or ⌘⇧B."
+            shortcutDraft = settingsStore.settings.shortcut
+            return
+        }
+        perform {
+            try settingsStore.setShortcut(shortcutDraft)
+        }
     }
 
     private func moveGames(from source: IndexSet, to destination: Int) {
