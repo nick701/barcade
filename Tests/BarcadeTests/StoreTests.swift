@@ -52,6 +52,18 @@ final class StoreTests: XCTestCase {
         )
     }
 
+    func testCatalogFiltersEnabledGamesInStoredOrder() {
+        var settings = AppSettings.defaults
+        settings.enabledGames = ["snake", "pong", "flappy"]
+        settings.gameOrder = ["pong", "flappy", "snake"] +
+            GameCatalog.allIDs.filter { !["pong", "flappy", "snake"].contains($0) }
+
+        XCTAssertEqual(
+            GameCatalog.enabledGames(for: settings).map(\.id),
+            ["pong", "flappy", "snake"]
+        )
+    }
+
     func testScoreStoreKeepsTopFiveAndPersists() throws {
         let store = try ScoreStore(directoryURL: temporaryDirectory)
         let baseDate = Date(timeIntervalSince1970: 1_700_000_000)

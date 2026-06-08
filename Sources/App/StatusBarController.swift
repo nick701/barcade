@@ -23,8 +23,22 @@ final class StatusBarController: NSObject {
 
         popover.behavior = .transient
         popover.animates = true
-        popover.contentSize = NSSize(width: 420, height: 520)
-        popover.contentViewController = NSHostingController(rootView: RootView())
+        popover.contentSize = NSSize(width: 460, height: 600)
+
+        let rootView: AnyView
+        do {
+            let settingsStore = try SettingsStore()
+            let scoreStore = try ScoreStore()
+            rootView = AnyView(
+                RootView(
+                    settingsStore: settingsStore,
+                    scoreStore: scoreStore
+                )
+            )
+        } catch {
+            rootView = AnyView(StorageErrorView(error: error))
+        }
+        popover.contentViewController = NSHostingController(rootView: rootView)
     }
 
     @objc private func togglePopover() {

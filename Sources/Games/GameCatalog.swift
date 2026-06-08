@@ -26,4 +26,14 @@ enum GameCatalog {
     ]
 
     static let allIDs = all.map(\.id)
+
+    static func enabledGames(for settings: AppSettings) -> [GameMetadata] {
+        let gamesByID = Dictionary(uniqueKeysWithValues: all.map { ($0.id, $0) })
+        return settings.gameOrder.compactMap { id in
+            guard settings.enabledGames.contains(id) else {
+                return nil
+            }
+            return gamesByID[id]
+        }
+    }
 }
