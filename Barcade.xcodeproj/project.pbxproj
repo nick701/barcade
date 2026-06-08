@@ -34,6 +34,7 @@
 		A10000000000000000000005 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* GameProtocol.swift */; };
 		A63895EEEA9225802D7E720C /* GameLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43483E418404B84114B583 /* GameLogicTests.swift */; };
 		BD0B3939E733D16ACB90C81C /* PauseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECDD73D67ED04A559157B6 /* PauseManagerTests.swift */; };
+		C0D07B583C3891C09788CE07 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105E5E3342C12A30FCC6C99 /* OnboardingView.swift */; };
 		C6066C0FAC139BAEA8EF6AEA /* ReactionTimerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80613B7D962B6A1ADCB787C8 /* ReactionTimerGame.swift */; };
 		C755CA617150089C19BAE94A /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465549E116386239E342317 /* StoreTests.swift */; };
 		CB36FDA8C84E90A4AA3FA3BA /* TapTheDotGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55884B9E1014149EBFCE2A14 /* TapTheDotGame.swift */; };
@@ -62,6 +63,7 @@
 		33A1D112939CC998FB7660CF /* AsteroidsGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsteroidsGame.swift; sourceTree = "<group>"; };
 		34AD00B8422C7B1D5B7F1EF9 /* TwentyFortyEightGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwentyFortyEightGame.swift; sourceTree = "<group>"; };
 		393F852D08A9081495DF969D /* GameCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameCatalog.swift; sourceTree = "<group>"; };
+		4105E5E3342C12A30FCC6C99 /* OnboardingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		43D85A26EA7D048AEDD24D71 /* ClickCaptureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClickCaptureView.swift; sourceTree = "<group>"; };
 		46238667F0A54B737B7C452A /* GameHostView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameHostView.swift; sourceTree = "<group>"; };
 		55884B9E1014149EBFCE2A14 /* TapTheDotGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TapTheDotGame.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				EE132A505E6ABDFFA36D0651 /* HighScoresView.swift */,
 				ED93197A856584E5541A9099 /* SettingsView.swift */,
 				46238667F0A54B737B7C452A /* GameHostView.swift */,
+				4105E5E3342C12A30FCC6C99 /* OnboardingView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				D8A8B650681BC8991559D7D2 /* BilliardsGame.swift in Sources */,
 				3ABBA5B354A4FA276BB20F79 /* GlobalShortcutManager.swift in Sources */,
 				FAFA3CEEA4225DF5B3411F4A /* LaunchAtLoginManager.swift in Sources */,
+				C0D07B583C3891C09788CE07 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

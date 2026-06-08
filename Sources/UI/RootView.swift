@@ -7,6 +7,8 @@ struct RootView: View {
 
     @State private var section = RootSection.games
     @State private var selectedGame: GameMetadata?
+    @State private var onboardingStep: OnboardingStep?
+    @State private var didCheckOnboarding = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -69,8 +71,38 @@ struct RootView: View {
         }
         .frame(width: 460, height: 600)
         .background(.regularMaterial)
+        .overlay {
+            if let onboardingStep {
+                OnboardingView(
+                    step: onboardingStep,
+                    onNext: advanceOnboarding,
+                    onSkip: completeOnboarding
+                )
+            }
+        }
+        .onAppear {
+            guard !didCheckOnboarding else {
+                return
+            }
+            didCheckOnboarding = true
+            if !settingsStore.settings.hasCompletedOnboarding {
+                onboardingStep = .games
+            }
+        }
     }
 
+    private func advanceOnboarding() {
+        if let next = onboardingStep?.next {
+            onboardingStep = next
+        } else {
+            completeOnboarding()
+        }
+    }
+
+    private func completeOnboarding() {
+        try? settingsStore.setOnboardingCompleted(true)
+        onboardingStep = nil
+    }
 }
 
 private enum RootSection: String, CaseIterable, Identifiable {

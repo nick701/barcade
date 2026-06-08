@@ -72,3 +72,12 @@
 - The floating window participates in the same pause/resume focus lifecycle.
 - Verified a real launch with floating mode enabled creates an on-screen Barcade window, then restored the prior settings file.
 - Verified 24 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.
+
+## Checkpoint 7 - First-launch onboarding
+
+- Added a three-step tooltip overlay for game selection, scores/settings navigation, and pin/shortcut access.
+- Added Next, Skip, and Start Playing controls with visible step progress.
+- Persisted completion in `settings.json`; completed onboarding does not reappear on later launches.
+- Verified the first-launch state launches successfully in a floating Barcade window.
+- Visual screenshot inspection was unavailable because macOS Screen Recording permission is disabled.
+- Verified 25 tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.

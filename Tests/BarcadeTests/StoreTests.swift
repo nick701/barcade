@@ -112,4 +112,10 @@ final class StoreTests: XCTestCase {
         XCTAssertEqual(definition?.keyCode, 5)
         XCTAssertNotEqual(definition?.modifiers, 0)
     }
+
+    func testOnboardingHasThreeOrderedSteps() {
+        XCTAssertEqual(OnboardingStep.games.next, .navigation)
+        XCTAssertEqual(OnboardingStep.navigation.next, .quickAccess)
+        XCTAssertNil(OnboardingStep.quickAccess.next)
+    }
 }
