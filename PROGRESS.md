@@ -8,3 +8,12 @@
 - Added the project-local build/run script and Codex Run action.
 - Verified `swift build`, `swift test`, and a warning-free `xcodebuild build`.
 - Verified the built app launches and its generated Info.plist contains `LSUIElement = true`.
+
+## Checkpoint 2 - JSON persistence
+
+- Added `SettingsStore` with plan-defined defaults and atomic JSON persistence.
+- Added persisted game order, enabled games, launch preference, shortcut, window mode, onboarding state, and per-game settings.
+- Added `ScoreStore` with ISO-8601 timestamps, top-five score retention, and per-game/global resets.
+- Default storage is `~/.config/barcade/settings.json` and `~/.config/barcade/scores.json`.
+- Added injected storage directories for isolated tests.
+- Verified four store tests pass with SwiftPM and Xcode; Xcode test output has zero warnings.

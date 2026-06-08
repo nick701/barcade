@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C6090A5534DDB23E91170CB /* ScoreStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B1DDCCF8490F076EE5640A /* ScoreStore.swift */; };
+		74EE1DBB144BD9D17EDD149F /* GameCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F852D08A9081495DF969D /* GameCatalog.swift */; };
+		83AE4F279D1122A1E597EC13 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F4D9E3DB11737343084E0C /* SettingsStore.swift */; };
 		A10000000000000000000001 /* BarcadeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* BarcadeApp.swift */; };
 		A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* AppDelegate.swift */; };
 		A10000000000000000000003 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* StatusBarController.swift */; };
 		A10000000000000000000004 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* RootView.swift */; };
 		A10000000000000000000005 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* GameProtocol.swift */; };
-		A10000000000000000000006 /* PlaceholderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* PlaceholderTests.swift */; };
+		C755CA617150089C19BAE94A /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465549E116386239E342317 /* StoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,15 +29,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		393F852D08A9081495DF969D /* GameCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameCatalog.swift; sourceTree = "<group>"; };
+		95F4D9E3DB11737343084E0C /* SettingsStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		B10000000000000000000001 /* BarcadeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcadeApp.swift; sourceTree = "<group>"; };
 		B10000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B10000000000000000000003 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		B10000000000000000000004 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B10000000000000000000005 /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
-		B10000000000000000000006 /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
 		B10000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B10000000000000000000008 /* Barcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barcade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10000000000000000000009 /* BarcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarcadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B1DDCCF8490F076EE5640A /* ScoreStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScoreStore.swift; sourceTree = "<group>"; };
+		C465549E116386239E342317 /* StoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F5C2CA5CA83679E17551B39 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				B4B1DDCCF8490F076EE5640A /* ScoreStore.swift */,
+				95F4D9E3DB11737343084E0C /* SettingsStore.swift */,
+			);
+			name = Storage;
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		G10000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,7 @@
 				G10000000000000000000003 /* App */,
 				G10000000000000000000004 /* Games */,
 				G10000000000000000000005 /* UI */,
+				5F5C2CA5CA83679E17551B39 /* Storage */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -89,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B10000000000000000000005 /* GameProtocol.swift */,
+				393F852D08A9081495DF969D /* GameCatalog.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -112,7 +130,7 @@
 		G10000000000000000000007 /* BarcadeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B10000000000000000000006 /* PlaceholderTests.swift */,
+				C465549E116386239E342317 /* StoreTests.swift */,
 			);
 			path = BarcadeTests;
 			sourceTree = "<group>";
@@ -237,6 +255,9 @@
 				A10000000000000000000003 /* StatusBarController.swift in Sources */,
 				A10000000000000000000004 /* RootView.swift in Sources */,
 				A10000000000000000000005 /* GameProtocol.swift in Sources */,
+				74EE1DBB144BD9D17EDD149F /* GameCatalog.swift in Sources */,
+				0C6090A5534DDB23E91170CB /* ScoreStore.swift in Sources */,
+				83AE4F279D1122A1E597EC13 /* SettingsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000006 /* PlaceholderTests.swift in Sources */,
+				C755CA617150089C19BAE94A /* StoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
